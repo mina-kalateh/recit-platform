@@ -1,0 +1,12 @@
+:root,[data-theme="dark"]{
+  --bg:#120E12; --alt:#1A1318; --surface:#21191F;
+  --text:#F8F2ED; --muted:#B8AAB1; --line:#40323A;
+  --brand:#D45A76; --gold:#D7A66A; --ph:#3A1522;
+  --btn:#6D1028; --btnfg:#F8F2ED;
+}
+[data-theme="light"]{
+  --bg:#F4EFE8; --alt:#EBE3DA; --surface:#FFFFFF;
+  --text:#211B1D; --muted:#71666B; --line:#E2D8D1;
+  --brand:#831B37; --gold:#87551F; --ph:#E9DCD3;
+  --btn:#831B37; --btnfg:#F4EFE8;
+}
