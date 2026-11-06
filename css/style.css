@@ -503,12 +503,14 @@ html[dir="rtl"] .mq-track {
 
 @media(prefers-reduced-motion:reduce) {
     * {
-        transition: none !important .mq {
-            overflow-x: auto
-        }
+        transition: none !important
+    }
 
-        .mq-track {
-            animation: none
-        }
+    .mq {
+        overflow-x: auto
+    }
+
+    .mq-track {
+        animation: none
     }
 }
