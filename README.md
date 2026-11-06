@@ -1,12 +1,12 @@
-# Loopiom
+# RÉCIT
 
 **A digital platform for theatre, performances, and stories.**
 
-Loopiom is a theatre-focused web project designed to bring theatre plays, live performances, and theatre-related editorial content together in one place.
+RÉCIT is a theatre-focused web project designed to bring theatre plays, live performances, and theatre-related editorial content together in one place.
 
 ## Project Vision
 
-The goal of Loopiom is to create an engaging, modern, and accessible platform for theatre lovers, with a distinctive visual identity inspired by the atmosphere of the stage.
+The goal of RÉCIT is to create an engaging, modern, and accessible platform for theatre lovers, with a distinctive visual identity inspired by the atmosphere of the stage.
 
 ## Planned Features
 
