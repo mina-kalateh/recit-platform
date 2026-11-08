@@ -57,6 +57,153 @@ html[lang="en"] .hd {
     line-height: 1.15
 }
 
+button.btn {
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer
+}
+
+
+.auth {
+    width: min(420px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    padding: 24px 28px 28px;
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    color: var(--text);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45)
+}
+
+.auth::backdrop {
+    background: rgba(18, 14, 18, .5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px)
+}
+
+.auth .auth-close {
+    position: absolute;
+    top: 20px;
+    inset-inline-end: 20px;
+    width: 36px;
+    height: 36px
+}
+
+.auth {
+    overflow-x: hidden
+}
+
+.auth .auth-close {
+    z-index: 3
+}
+
+.auth-curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 2;
+    background:
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, .28) 0 10px, rgba(255, 255, 255, .05) 10px 20px, transparent 20px 34px),
+        linear-gradient(#7a1230, #4a0a1c);
+    transition: transform 1.1s cubic-bezier(.7, 0, .2, 1) .25s
+}
+
+.auth-curtain.l {
+    left: 0;
+    border-right: 2px solid var(--gold)
+}
+
+.auth-curtain.r {
+    right: 0;
+    border-left: 2px solid var(--gold)
+}
+
+.auth.open .auth-curtain.l {
+    transform: translateX(-101%)
+}
+
+.auth.open .auth-curtain.r {
+    transform: translateX(101%)
+}
+
+.auth-tabs,
+.auth-form {
+    opacity: 0;
+    transition: opacity .6s ease .7s
+}
+
+.auth.open .auth-tabs,
+.auth.open .auth-form {
+    opacity: 1
+}
+
+.auth-tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 36px;
+    margin-bottom: 20px
+}
+
+.auth-tab {
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 4px 0;
+    color: var(--muted);
+    font: inherit;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer
+}
+
+.auth-tab[aria-selected="true"] {
+    color: var(--text);
+    border-color: var(--gold)
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.auth-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.auth-form input {
+    padding: 10px 12px;
+    background: color-mix(in srgb, var(--bg) 55%, transparent);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit
+}
+
+.auth-form .btn {
+    width: 100%
+}
+
+#auth-form[data-mode="login"] .only-signup,
+#auth-form[data-mode="signup"] .only-login {
+    display: none
+}
+
+.auth-note {
+    margin: 0;
+    min-height: 1.6em;
+    font-size: 13px;
+    color: var(--gold)
+}
+
 a {
     color: inherit;
     text-decoration: none
@@ -432,7 +579,7 @@ footer {
 .mq-track {
     display: flex;
     width: max-content;
-    animation: mq-ltr 45s linear infinite
+    animation: mq-ltr 100s linear infinite
 }
 
 html[dir="rtl"] .mq-track {
@@ -450,12 +597,22 @@ html[dir="rtl"] .mq-track {
 }
 
 .cover {
-    aspect-ratio: 3 / 4
+    aspect-ratio: 10 / 13
+}
+
+.cover img,
+.poster img,
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
 }
 
 .poster {
     width: 140px;
-    flex: none
+    flex: none;
+    aspect-ratio: 250 / 379
 }
 
 .thumb {
@@ -499,9 +656,37 @@ html[dir="rtl"] .mq-track {
     }
 }
 
+.reveal {
+    opacity: 0
+}
+
+.reveal.show {
+    animation: reveal-in .8s ease both
+}
+
+.hero .po.reveal.show {
+    animation-delay: .15s
+}
+
+@keyframes reveal-in {
+    from {
+        opacity: 0;
+        transform: translateY(28px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
 @media(prefers-reduced-motion:reduce) {
     * {
         transition: none !important
+    }
+
+    .auth-curtain {
+        display: none
     }
 
     .mq {

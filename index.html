@@ -21,6 +21,10 @@
                     <circle cx="11" cy="11" r="6" />
                     <path d="M20 20l-4.2-4.2" />
                 </svg></button>
+            <button class="ib" type="button" id="auth-open"><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+                </svg></button>
             <button class="ib" type="button" id="lang"></button>
             <button class="ib lamp" type="button" id="theme" aria-pressed="false"><svg viewBox="0 0 24 24"
                     aria-hidden="true">
@@ -84,8 +88,8 @@
     <footer>
         <div class="wrap">
             <div class="fg">
-                <div class="fc brand"><a href="#" class="logo"><b>RÉCIT</b></a><span class="mu"
-                        data-i18n="tag"></span></div>
+                <div class="fc brand"><a href="#" class="logo"><b>RÉCIT</b></a><span class="mu" data-i18n="tag"></span>
+                </div>
                 <div class="fc"><b data-i18n="f1"></b><a href="#plays" data-i18n="n1"></a><a href="#stage"
                         data-i18n="n2"></a><a href="#journal" data-i18n="n3"></a></div>
                 <div class="fc"><b data-i18n="f2"></b><a href="#" data-i18n="a1"></a><a href="#" data-i18n="a2"></a><a
@@ -100,6 +104,37 @@
             <div class="cp">© RÉCIT — Theatre &amp; Culture</div>
         </div>
     </footer>
+
+    <dialog class="auth" id="auth" aria-labelledby="auth-tabs">
+        <div class="auth-curtain l" aria-hidden="true"></div>
+        <div class="auth-curtain r" aria-hidden="true"></div>
+
+        <button class="ib auth-close" type="button" id="auth-close">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+        </button>
+        <div class="auth-tabs" id="auth-tabs">
+            <button class="auth-tab" type="button" data-mode="login" aria-selected="true"
+                data-i18n="authLogin"></button>
+            <button class="auth-tab" type="button" data-mode="signup" aria-selected="false"
+                data-i18n="authSignup"></button>
+        </div>
+        <form class="auth-form" id="auth-form" data-mode="login">
+            <label class="only-signup"><span data-i18n="authName"></span>
+                <input type="text" id="auth-name" name="name" autocomplete="name">
+            </label>
+            <label><span data-i18n="authEmail"></span>
+                <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label><span data-i18n="authPass"></span>
+                <input type="password" id="auth-pass" name="password" minlength="8" required>
+            </label>
+            <button class="btn only-login" type="submit" data-i18n="authGo1"></button>
+            <button class="btn only-signup" type="submit" data-i18n="authGo2"></button>
+            <p class="auth-note" id="auth-note" aria-live="polite"></p>
+        </form>
+    </dialog>
 
     <script src="js/script.js"></script>
 </body>
