@@ -248,6 +248,55 @@ main.page p {
     color: var(--muted)
 }
 
+main.page.wide {
+    max-width: 1440px
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.chip {
+    padding: 6px 18px;
+    background: none;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color .25s, color .25s
+}
+
+.chip:hover {
+    border-color: var(--gold);
+    color: var(--gold)
+}
+
+.chip[aria-pressed="true"] {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg)
+}
+
+.grid {
+    --min: 240px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr));
+    gap: 24px
+}
+
+main[data-section="performances"] .grid {
+    --min: 340px
+}
+
+main[data-section="journal"] .grid {
+    --min: 280px
+}
+
 
 
 .contact-form {
@@ -713,6 +762,7 @@ html[dir="rtl"] .mq-track {
 #j-l .card {
     width: 320px
 }
+
 
 @keyframes mq-ltr {
     to {

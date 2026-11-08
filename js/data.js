@@ -9,7 +9,9 @@ const PLAYS = [
         fa: { title: "قتل آقای هاورشام", author: "جاناتان سیر", year: "۱۴۰۵" },
         en: { title: "The Murder of Mr Haversham", author: "Jonathan Sayer", year: "2025" }
     },
-    { tag: "t3" },
+    {
+        tag: "t3"
+    },
     { tag: "t1" },
     { tag: "t2" },
     { tag: "t3" },
@@ -18,13 +20,29 @@ const PLAYS = [
 const PERFORMANCES = [
     {
         status: "now",
-        image: "assets/images/all-my-sons.webp",
-        fa: { title: "همه پسران من", director: "علیرضا بنیادی", venue: "سالن میهن بانو، شیراز", when: "از ۱۴ آبان · ساعت ۱۸:۳۰" },
-        en: { title: "All My Sons", director: "Alireza Bonyadi", venue: "Mahin Banoo Hall, Shiraz", when: "From 5 Nov · 18:30" }
+        image: "assets/images/the-murder-of-mr-haversham.webp",
+        fa: { title: "قتل آقای هاورشام", director: "فراز ‌غلامی", venue: "پردیس تئاتر موسیقی شهرزاد", when: "از ۴ شهریور · ساعت ۱۸:۰۰" },
+        en: { title: "The Murder of Mr Haversham", director: "Faraz Gholami", venue: "Shahrzad theater", when: "From 26 Aug · 18:00" }
     },
-    { status: "soon" },
-    { status: "now" },
-    { status: "soon" }
+    {
+        status: "soon",
+        image: "assets/images/moonwalk.webp",
+        fa: { title: "مون‌واک", director: "سجاد ‌داغستانی", venue: "تئاتر هامون", when: "از ۱۴ آذر · ساعت ۲۱:۰۰" },
+        en: { title: "Moonwalk", director: "Sajad Daghestani", venue: "Hamoon theatre", when: "From 5 Dec · 21:00" }
+
+    },
+    {
+        status: "now",
+        image: "assets/images/shoulbasi.webp",
+        fa: { title: "شولباسی", director: "عقیل ‌زمانی", venue: "تئاتر هامون", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
+        en: { title: "Shoolbasi", director: "Aghil Zamani", venue: "Hamoon theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
+    },
+    {
+        status: "soon",
+        image: "assets/images/shahrag.webp",
+        fa: { title: "شاه رگ", director: "شادی ‌امیری", venue: "تئاتر هامون", when: "از ۸ آذر · ساعت ۱۹:۰۰" },
+        en: { title: "Life Line", director: "Shadi Amiri", venue: "Hamoon theatre", when: "From 29 Nov · 19:00" }
+    }
 ];
 const ARTICLES = [
     {
