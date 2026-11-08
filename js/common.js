@@ -29,7 +29,12 @@ function applyLanguage() {
 
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t[el.dataset.i18n]; });
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => { el.alt = t[el.dataset.i18nAlt]; });
-
+    document.querySelectorAll("[data-i18n-tip]").forEach((el) => {
+        const label = t[el.dataset.i18nTip];
+        el.setAttribute("aria-label", label);
+        el.setAttribute("data-tip", label);
+    });
+    
     const langButton = document.getElementById("lang");
     langButton.textContent = t.lang;
     langButton.setAttribute("aria-label", state.lang === "fa" ? "English" : "فارسی");

@@ -248,6 +248,59 @@ main.page p {
     color: var(--muted)
 }
 
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px 12px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical
+}
+
+.contact-form .btn {
+    align-self: flex-start
+}
+
+.contact-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap
+}
+
+.contact-links .ib {
+    width: 56px;
+    height: 56px
+}
+
+.contact-links .ib svg {
+    width: 26px;
+    height: 26px
+}
+
 header {
     display: flex;
     align-items: center;
@@ -585,6 +638,12 @@ footer {
 
 .fc b {
     color: var(--gold)
+}
+
+.social {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
 }
 
 .cp {
