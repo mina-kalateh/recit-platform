@@ -132,6 +132,7 @@ nav {
     background: none;
     color: var(--text);
     cursor: pointer;
+    position: relative;
     font: 600 14px Vazirmatn, sans-serif
 }
 
@@ -148,10 +149,6 @@ nav {
     stroke-width: 1.6;
     stroke-linecap: round;
     stroke-linejoin: round
-}
-
-.ib {
-    position: relative
 }
 
 .ib[data-tip]::after,
@@ -349,18 +346,6 @@ section.s {
     font-size: 14px
 }
 
-.g4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px
-}
-
-.g3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px
-}
-
 .card {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -423,6 +408,10 @@ footer {
     gap: 10px
 }
 
+.fc.brand {
+    max-width: 300px
+}
+
 .fc b {
     color: var(--gold)
 }
@@ -460,6 +449,19 @@ html[dir="rtl"] .mq-track {
     margin-inline-end: 24px
 }
 
+.cover {
+    aspect-ratio: 3 / 4
+}
+
+.poster {
+    width: 140px;
+    flex: none
+}
+
+.thumb {
+    aspect-ratio: 16 / 9
+}
+
 #plays-l .card {
     width: 240px
 }
@@ -494,10 +496,6 @@ html[dir="rtl"] .mq-track {
 
     .hero {
         padding-block: 48px
-    }
-
-    .hero .po {
-        min-height: 300px
     }
 }
 
