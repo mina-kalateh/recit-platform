@@ -4,18 +4,46 @@
 // ---------- Card data (keys point into TEXT) ----------
 const PLAYS = [
     {
-        tag: "t2",
-        image: "assets/images/the-murder-of-mr-haversham.webp",
-        fa: { title: "قتل آقای هاورشام", author: "جاناتان سیر", year: "۱۴۰۵" },
-        en: { title: "The Murder of Mr Haversham", author: "Jonathan Sayer", year: "2025" }
+        tag: "t1",
+        image: "assets/images/waiting-for-Godot.webp",
+        fa: { title: "انتظار برای گدوت", author: "ساموئل بکت", year: "۱۹۵۲" },
+        en: { title: "Waiting for Godot", author: "Samuel Beckett", year: "1952" }
     },
     {
-        tag: "t3"
+        tag: "t2",
+        image: "assets/images/death-of-a-salesman.webp",
+        fa: { title: "مرگ یک فروشنده", author: "آرتور میلر", year: "۱۹۴۹" },
+        en: { title: "Death of a salesman", author: "Arthur Miller", year: "1949" }
     },
-    { tag: "t1" },
-    { tag: "t2" },
-    { tag: "t3" },
-    { tag: "t1" }
+    {
+        tag: "t3",
+        image: "assets/images/amiz-ghalamdon.webp",
+        fa: { title: "آمیز قلمدون", author: "اکبر ‌رادی", year: "۱۳۹۷" },
+        en: { title: "Amiz Ghalamdon", author: "Akbar Radi", year: "1397" }
+
+    },
+
+    {
+        tag: "t1",
+        image: "assets/images/oedipus-rex_poster.webp",
+        fa: { title: "ادیپ شهریار", author: "سوفوکل", year: "۲۰۱۵" },
+        en: { title: "Oedipus Rex", author: "Sophocles", year: "2015" }
+
+    },
+    {
+        tag: "t2",
+        image: "assets/images/the-pillowman.webp",
+        fa: { title: "مرد بالشی", author: "مارتین مکدوناق", year: "۲۰۰۳" },
+        en: { title: "The Pillowman", author: "Martin McDonagh", year: "2003" }
+
+    },
+    {
+        tag: "t3",
+        image: "assets/images/night-on-the-wet-pavement.webp",
+        fa: { title: "شب روی سنگفرش خیس", author: "اکبر رادی", year: "۱۴۰۲" },
+        en: { title: "Night on the Wet Pavement", author: "Akbar Radi", year: "1402" }
+
+    }
 ];
 const PERFORMANCES = [
     {
@@ -47,13 +75,30 @@ const PERFORMANCES = [
 const ARTICLES = [
     {
         tag: "k0",
-        fa: { kind: "مقاله", title: "نقش آموزش هنرهای نمایشی در تقویت خلاقیت کودکان", date: "۱۴۰۵" },
-        en: { kind: "Article", title: "The Role of Performing Arts Education in Strengthening Children's Creativity", date: "2026" }
+        image: "assets/images/k0.webp",
+        fa: { kind: "مقاله", title: "در انتظار گودو", date: "۱۴۰۵" },
+        en: { kind: "Article", title: "Waiting for Godot", date: "2026" }
     },
-    { tag: "k2" },
-    { tag: "k3" },
-    { tag: "k1" },
-    { tag: "k2" }
+    {
+        tag: "k1",
+        image: "assets/images/k1.webp",
+        fa: { kind: "نقد", title: "مرگ فروشنده؛ فروپاشی رؤیای آمریکایی روی صحنه", date: "۱۴۰۵" },
+        en: { kind: "Critique", title: "Death of a Salesman: The Collapse of the American Dream on Stage", date: "2026" }
+
+    },
+    {
+        tag: "k2",
+        image: "assets/images/k2.webp",
+        fa: { kind: "گفت‌وگو", title: "جهان کارگردان تئاتر", date: "۱۴۰۵" },
+        en: { kind: "Interview", title: "The World of a Theater Director", date: "2026" }
+
+    },
+    {
+        tag: "k3",
+        image: "assets/images/k3.webp",
+        fa: { kind: "تاریخچه", title: "از تعزیه تا تئاتر مدرن؛ روایت شکل‌گیری تئاتر ایران", date: "۱۴۰۵" },
+        en: { kind: "History", title: "From Ta'ziyeh to Modern Theater: The Story of the Emergence of Iranian Theater", date: "2026" }
+    }
 ];
 // ---------- Card templates ----------
 const playCard = (t, play) => {
