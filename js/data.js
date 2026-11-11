@@ -76,6 +76,28 @@ const PERFORMANCES = [
         fa: { title: "شاه رگ", director: "شادی ‌امیری", venue: "تئاتر هامون", when: "از ۸ آذر · ساعت ۱۹:۰۰" },
         en: { title: "Life Line", director: "Shadi Amiri", venue: "Hamoon theatre", when: "From 29 Nov · 19:00" }
     },
+    {
+        status: "soon",
+        genre: "g2",
+        image: "../assets/images/paeiz.webp",
+        fa: { title: "من، بیه‌دو، پاییز", director: "زهره ‌یحیایی", venue: "تماشاخانه ‌جوانمرد", when: "از ۱۵ آذر · ساعت ۱۹:۰۰" },
+        en: { title: "I, Beh Two, Autumn", director: "Zohreh Yahyaie", venue: "Tamashakhaneh theatre", when: "From 6 Nov · 19:00" }
+    },
+    {
+        status: "now",
+        genre: "g4",
+        image: "../assets/images/lutriha.webp",
+        fa: { title: "لوتری‌ها", director: "سیما ‌شکری", venue: "تئاتر آبی", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
+        en: { title: "lotteries", director: "Sima Shokri", venue: "Blue theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
+    },
+    {
+        status: "now",
+        genre: "g2",
+        image: "../assets/images/saherehsoozan.webp",
+        fa: { title: "ساحره سوزان", director: "ستاره ‌افشون", venue: "تئاتر مرکزی", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
+        en: { title: "Sahrah Suzanne", director: "Setareh Afshon", venue: "Center theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
+    },
+
 ];
 const ARTICLES = [
     {
