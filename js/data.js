@@ -103,8 +103,8 @@ const ARTICLES = [
     {
         tag: "k0",
         image: "../assets/images/k0.webp",
-        fa: { kind: "مقاله", title: "در انتظار گودو", date: "۱۴۰۵" },
-        en: { kind: "Article", title: "Waiting for Godot", date: "2026" }
+        fa: { kind: "مقاله", title: "در انتظار گودو", date: "۱۴۰۵", excerpt: "دو مرد کنار یک درخت منتظر کسی‌اند که شاید هرگز نیاید. چرا این انتظار بعد از هفتاد سال هنوز تازه است؟", mins: "۸" },
+        en: { kind: "Article", title: "Waiting for Godot", date: "2026", excerpt: "Two men wait by a tree for someone who may never come. Why does this waiting still feel new after seventy years?", mins: "8" }
     },
     {
         tag: "k1",

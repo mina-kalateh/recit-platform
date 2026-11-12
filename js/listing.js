@@ -1,5 +1,15 @@
 // Listing pages (plays, performances, journal). One script for all three:
 // each page names its section with data-section on <main>.
+// Journal page only: a reading-style row instead of a card.
+const articleRow = (t, article) => {
+    const info = article[state.lang];
+    const thumb = article.image
+        ? `<img src="${ROOT}${article.image}" alt="${info.title}" loading="lazy">`
+        : t.im;
+    const meta = [info.author, info.mins ? `${info.mins} ${t.mn}` : ""].filter(Boolean).join(" · ");
+    return `<a class="row" href="#"><div class="ph thumb">${thumb}</div><div class="rb"><span class="ct">${info.kind} · ${info.date}</span><h3 class="hd">${info.title}</h3>${info.excerpt ? `<p>${info.excerpt}</p>` : ""}<span class="mu">${meta}</span><span class="more">${t.rd}</span></div></a>`;
+};
+
 const SECTIONS = {
     plays: {
         items: PLAYS, card: playCard, field: "tag",
@@ -11,7 +21,7 @@ const SECTIONS = {
         genres: ["g1", "g2", "g3", "g4"]
     },
     journal: {
-        items: ARTICLES, card: articleCard, field: "tag",
+        items: ARTICLES, card: articleRow, field: "tag",
         filters: [["k0", "fk0"], ["k1", "fk1"], ["k2", "fk2"], ["k3", "fk3"]]
     }
 };
