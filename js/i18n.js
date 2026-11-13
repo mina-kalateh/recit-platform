@@ -9,7 +9,7 @@ const TEXT = {
         ctT: "با ما در ارتباط باشید", ctP1: "نظر، پیشنهاد یا خبری از دنیای تئاتر دارید؟ خوشحال می‌شویم بشنویم.", ctH2: "راه‌های ارتباطی",// داخل fa:
         ctH3: "یا فرم زیر را پر کنید", ctWa: "پیام در واتس‌اپ", ctSub: "موضوع", ctS0: "یک موضوع انتخاب کنید", ctS1: "معرفی اجرا یا نمایشنامه", ctS2: "ارسال مقاله، نقد یا گفت‌وگو", ctS3: "همکاری، پیشنهاد و بازخورد", ctS4: "سایر", ctMsg: "پیام", ctSend: "ارسال پیام", ctNote: "اتصال به سرور هنوز انجام نشده است.",
         ctEm: "ایمیل", ctIg: "اینستاگرام", f3: "ما را پیدا کنید", fAll: "همه", fEmpty: "موردی پیدا نشد.", fk0: "مقاله", fk1: "نقد", fk2: "گفت‌وگو", fk3: "تاریخچه", fk3: "تاریخچه",
-        more: "مشاهده‌ی جزئیات ←", gLabel: "ژانر", g1: "کمدی", g2: "درام", g3: "معمایی", g4: "موزیکال", rd: "ادامه‌ی مطلب ←", mn: "دقیقه مطالعه"
+        more: "مشاهده‌ی جزئیات ←", gLabel: "ژانر", g1: "کمدی", g2: "درام", g3: "معمایی", g4: "موزیکال", rd: "ادامه‌ی مطلب ←", mn: "دقیقه مطالعه", pdBack: "→ بازگشت به اجراها", pdDirector: "کارگردان", pdDate: "تاریخ و ساعت", pdVenue: "محل اجرا", pdBuy: "خرید بلیت از تیوال", pdMissing: "این اجرا پیدا نشد."
     },
     en: {
         sub: "Theatre & Culture", n0: "Home", n1: "Plays", n2: "Performances", n3: "Journal", eb: "A WORLD BEHIND THE CURTAIN", h1: "Every stage,", h2: "a new world.", hs: "Plays, performances and stories that come alive on stage.", c1: "Discover plays", c2: "Theatre performances", po: "A theatre stage with the curtain open", ph: "Featured plays", all: "View all →", fh: "On stage", jh: "From the journal", js: "Criticism, analysis, conversations and the history of theatre", tag: "A window into the world of plays, performances and the art of theatre.", f1: "Discover", f2: "About RÉCIT", a1: "About us", a2: "Contact", a3: "Privacy",
@@ -20,6 +20,6 @@ const TEXT = {
         ctT: "Get in touch", ctP1: "Have a thought, a suggestion or news from the world of theatre? We would love to hear it.", ctH2: "Ways to reach us",// داخل en:
         ctH3: "Or fill in the form", ctWa: "Message on WhatsApp", ctSub: "Subject", ctS0: "Choose a subject", ctS1: "Introduce a performance or play", ctS2: "Send an article, review or interview", ctS3: "Collaboration, suggestions and feedback", ctS4: "Other", ctMsg: "Message", ctSend: "Send message", ctNote: "Not connected to a server yet.",// داخل en:
         ctEm: "Email", ctIg: "Instagram", f3: "Find us", fAll: "All", fEmpty: "Nothing found.", fk0: "Article", fk1: "Review", fk2: "Interview", fk3: "History", fk3: "History",
-        more: "View details →", gLabel: "Genre", g1: "Comedy", g2: "Drama", g3: "Mystery", g4: "Musical", rd: "Read on →", mn: "min read"
+        more: "View details →", gLabel: "Genre", g1: "Comedy", g2: "Drama", g3: "Mystery", g4: "Musical", rd: "Read on →", mn: "min read", pdBack: "← Back to performances", pdDirector: "Director", pdDate: "Date & time", pdVenue: "Venue", pdBuy: "Buy tickets on Tiva", pdMissing: "This performance was not found."
     }
 };

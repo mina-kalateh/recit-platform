@@ -2,7 +2,8 @@
 // To add an item, add one object to the matching array.
 
 // ---------- Card data (keys point into TEXT) ----------
-// const ROOT = location.pathname.includes("/pages/") ? "../" : "";
+const ROOT = location.pathname.includes("/pages/") ? "../" : "";
+
 const PLAYS = [
     {
         tag: "t1",
@@ -48,51 +49,65 @@ const PLAYS = [
 ];
 const PERFORMANCES = [
     {
+        id: "haversham",
         status: "now",
         genre: "g3",
+        tiwall: "https://www.tiwall.com/p/ghatl.emarat6",
         image: "../assets/images/the-murder-of-mr-haversham.webp",
         fa: { title: "قتل آقای هاورشام", director: "فراز ‌غلامی", venue: "پردیس تئاتر موسیقی شهرزاد", when: "از ۴ شهریور · ساعت ۱۸:۰۰" },
         en: { title: "The Murder of Mr Haversham", director: "Faraz Gholami", venue: "Shahrzad theater", when: "From 26 Aug · 18:00" }
     },
     {
+        id: "moonwalk",
         status: "soon",
         genre: "g2",
+        tiwall: "https://www.tiwall.com/p/moonwalk",
         image: "../assets/images/moonwalk.webp",
         fa: { title: "مون‌واک", director: "سجاد ‌داغستانی", venue: "تئاتر هامون", when: "از ۱۴ آذر · ساعت ۲۱:۰۰" },
         en: { title: "Moonwalk", director: "Sajad Daghestani", venue: "Hamoon theatre", when: "From 5 Dec · 21:00" }
 
     },
     {
+        id: "Shoolbasi",
         status: "now",
         genre: "g1",
+        tiwall: "https://www.tiwall.com/p/shoul2",
         image: "../assets/images/shoulbasi.webp",
         fa: { title: "شولباسی", director: "عقیل ‌زمانی", venue: "تئاتر هامون", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
         en: { title: "Shoolbasi", director: "Aghil Zamani", venue: "Hamoon theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
     },
     {
+        id: "shahrag",
         status: "soon",
         genre: "g2",
+        tiwall: "https://www.tiwall.com/p/shahrag2",
         image: "../assets/images/shahrag.webp",
         fa: { title: "شاه رگ", director: "شادی ‌امیری", venue: "تئاتر هامون", when: "از ۸ آذر · ساعت ۱۹:۰۰" },
         en: { title: "Life Line", director: "Shadi Amiri", venue: "Hamoon theatre", when: "From 29 Nov · 19:00" }
     },
     {
+        id: "ibehtwoautumn",
         status: "soon",
         genre: "g2",
+        tiwall: "https://www.tiwall.com/p/paeiz8",
         image: "../assets/images/paeiz.webp",
         fa: { title: "من، بیه‌دو، پاییز", director: "زهره ‌یحیایی", venue: "تماشاخانه ‌جوانمرد", when: "از ۱۵ آذر · ساعت ۱۹:۰۰" },
         en: { title: "I, Beh Two, Autumn", director: "Zohreh Yahyaie", venue: "Tamashakhaneh theatre", when: "From 6 Nov · 19:00" }
     },
     {
+        id: "lotteries",
         status: "now",
         genre: "g4",
+        tiwall: "https://www.tiwall.com/p/lutriha",
         image: "../assets/images/lutriha.webp",
         fa: { title: "لوتری‌ها", director: "سیما ‌شکری", venue: "تئاتر آبی", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
         en: { title: "lotteries", director: "Sima Shokri", venue: "Blue theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
     },
     {
+        id: "sahrahSuzanne",
         status: "now",
         genre: "g2",
+        tiwall: "https://www.tiwall.com/p/saherehsoozan",
         image: "../assets/images/saherehsoozan.webp",
         fa: { title: "ساحره سوزان", director: "ستاره ‌افشون", venue: "تئاتر مرکزی", when: "از ۴ آبان تا ۱۵ آبان · ساعت ۱۸:۳۰" },
         en: { title: "Sahrah Suzanne", director: "Setareh Afshon", venue: "Center theatre", when: "From 25 Dec Until 6 Nov · 18:30" }
@@ -145,7 +160,7 @@ const performanceCard = (t, show) => {
     const title = info ? info.title : t.ft;
     const credit = info ? `${info.director} · ${info.venue}` : t.fd;
     const when = info ? info.when : t.fc;
-    return `<a class="card" href="#"><div class="ph poster">${poster}</div><div class="bd"><span class="tag">${t[show.status]}</span><h3 class="hd">${title}</h3><span class="mu">${credit}</span><span class="mu">${when}</span><span class="mu">${when}</span><span class="more">${t.more}</span></div></a>`;
+    return `<a class="card" href="${ROOT ? "" : "pages/"}performance.html?id=${show.id}"><div class="ph poster">${poster}</div><div class="bd"><span class="tag">${t[show.status]}</span><h3 class="hd">${title}</h3><span class="mu">${credit}</span><span class="mu">${when}</span><span class="more">${t.more}</span></div></a>`;
 };
 const articleCard = (t, article) => {
     const info = article[state.lang];

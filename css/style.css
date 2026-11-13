@@ -875,6 +875,62 @@ html[dir="rtl"] .mq-track {
     width: 320px
 }
 
+.detail {
+    display: grid;
+    grid-template-columns: minmax(220px, 340px) 1fr;
+    gap: 48px;
+    align-items: start
+}
+
+.detail .cover {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--line)
+}
+
+.di {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start
+}
+
+.di h1 {
+    margin: 0;
+    font-size: clamp(32px, 4.5vw, 52px)
+}
+
+.di p {
+    margin: 0
+}
+
+.facts {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.facts div {
+    padding-block: 14px;
+    border-bottom: 1px solid var(--line)
+}
+
+.facts dt {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600
+}
+
+.facts dd {
+    margin: 0
+}
+
+@media (max-width: 760px) {
+    .detail {
+        grid-template-columns: 1fr
+    }
+}
 
 @keyframes mq-ltr {
     to {
