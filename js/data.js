@@ -54,8 +54,15 @@ const PERFORMANCES = [
         genre: "g3",
         tiwall: "https://www.tiwall.com/p/ghatl.emarat6",
         image: "../assets/images/the-murder-of-mr-haversham.webp",
-        fa: { title: "قتل آقای هاورشام", director: "فراز ‌غلامی", venue: "پردیس تئاتر موسیقی شهرزاد", when: "از ۴ شهریور · ساعت ۱۸:۰۰" },
-        en: { title: "The Murder of Mr Haversham", director: "Faraz Gholami", venue: "Shahrzad theater", when: "From 26 Aug · 18:00" }
+        fa: { title: "قتل آقای هاورشام", director: "فراز ‌غلامی", venue: "پردیس تئاتر موسیقی شهرزاد", when: "از ۴ شهریور · ساعت ۱۸:۰۰", desc: "وقتی در یک شب همه چیز برای یک گروه تئاتر و مخاطبانش به بدترین شکل ممکن پیش می رود.", address: "خیابان حافظ، خیابان نوفل‌لوشاتو،‌ بعد از سفارت ایتالیا، شماره ۷۶" },
+        en: { title: "The Murder of Mr Haversham", director: "Faraz Gholami", venue: "Shahrzad theater", when: "From 26 Aug · 18:00", desc: "One night, everything goes wrong in the worst possible way for a theatre company and its audience.", address: "No. 76, Neauphle-le-Château St., Hafez St., after the Italian Embassy" },
+        gallery: [
+            "../assets/images/haversham-1.webp",
+            "../assets/images/haversham-2.webp",
+            "../assets/images/haversham-3.webp",
+            "../assets/images/haversham-4.webp"
+        ],
+        teaser: "../assets/videos/haversham.ts"
     },
     {
         id: "moonwalk",
