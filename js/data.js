@@ -62,7 +62,7 @@ const PERFORMANCES = [
             "../assets/images/haversham-3.webp",
             "../assets/images/haversham-4.webp"
         ],
-        teaser: "../assets/videos/haversham.ts"
+        teaser: "../assets/videos/haversham.mp4"
     },
     {
         id: "moonwalk",
