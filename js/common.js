@@ -34,7 +34,7 @@ function applyLanguage() {
         el.setAttribute("aria-label", label);
         el.setAttribute("data-tip", label);
     });
-    
+
     const langButton = document.getElementById("lang");
     langButton.textContent = t.lang;
     langButton.setAttribute("aria-label", state.lang === "fa" ? "English" : "فارسی");
@@ -111,6 +111,52 @@ authForm.addEventListener("submit", (event) => {
     event.preventDefault();
     authNote.textContent = TEXT[state.lang].authNote; // replaced by a real request later
 });
+
+// ---------- Comments box (performance and play pages). Saved in this browser only, for now. ----------
+const COMMENT_TYPES = ["cmT1", "cmT2", "cmT3", "cmT4"];
+
+// User text goes into innerHTML, so special characters must be escaped.
+function esc(text) {
+    return String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function readComments(key) {
+    try { return JSON.parse(readStorage(key)) || []; } catch (e) { return []; }
+}
+
+function commentsHtml(t, key) {
+    const list = readComments(key);
+    const items = list.length
+        ? list.map((c) => `<article class="comment"><div class="ch"><b>${esc(c.name) || t.cmAnon}</b><span class="tag">${t[c.type]}</span><span class="mu">${new Date(c.date).toLocaleDateString(state.lang === "fa" ? "fa-IR" : "en-GB")}</span></div><p>${esc(c.text)}</p></article>`).join("")
+        : `<p class="mu">${t.cmEmpty}</p>`;
+    const options = COMMENT_TYPES.map((type) => `<option value="${type}">${t[type]}</option>`).join("");
+    return `
+        <section class="comments">
+            <h2 class="hd">${t.cmH}</h2>
+            <form class="contact-form" id="comment-form">
+                <label><span>${t.authName}</span><input type="text" name="name" autocomplete="name"></label>
+                <label><span>${t.cmType}</span><select name="type">${options}</select></label>
+                <label><span>${t.cmText}</span><textarea name="text" minlength="3" required></textarea></label>
+                <button class="btn" type="submit">${t.cmSend}</button>
+            </form>
+            <div class="comment-list">${items}</div>
+        </section>`;
+}
+
+// The form is rebuilt on every render, so one listener on the container handles the submit.
+function bindComments(box, key, rerender) {
+    box.addEventListener("submit", (event) => {
+        if (event.target.id !== "comment-form") return;
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const text = data.get("text").trim();
+        if (!text) return;
+        const list = readComments(key);
+        list.unshift({ name: data.get("name").trim(), type: data.get("type"), text, date: Date.now() });
+        writeStorage(key, JSON.stringify(list));
+        rerender(TEXT[state.lang]);
+    });
+}
 
 window.addEventListener("DOMContentLoaded", () => {
     applyLanguage();
